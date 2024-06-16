@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Lemon&family=Rye&display=swap');
+
+body {
+    background-image: linear-gradient(to right, #60495A , #A9ACA9);
+}
+
+h1 {
+    color: #2F2235;
+    text-align: center;
+    font-size: 40px;
+    border-bottom: 3px solid #2F2235;
+    font-family: "Lemon", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#todo-list {
+    width: 500px;
+    margin: 60px auto;
+}
+
+  .todo {
+    border: 2px solid #BFC3BA;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    box-shadow: 10px 5px 5px #817F75;
+    background-color: #BFC3BA;
+  }
+
+  form {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0px 30px 0px;
+    padding: 10px 0px;
+  }
+
+  form input {
+    padding: 4px 8px;
+    flex-grow: 1;
+    margin-right: 16px;
+    border-radius: 5px;
+    background: rgba(63, 50, 68, 0.7);
+  }
+
+  form input:focus {
+    outline: none;
+  }
+
+  .todo {
+    display: flex;
+    flex-direction: column;
+  }
+    
+  button {
+    font-size: 16px;
+    background-color: #3F3244;
+    color: #fff;
+    border-radius: 8px;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+  }
+
+  #addBtn {
+    border-radius: 50%;
+    padding: 10px 14px;
+  }
+
+  button:hover {
+    background-color: rgb(173, 47, 28);
+  }
+
+  button:active {
+    background-color: rgb(130,35,21);
+  }
+
+  button:focus {
+    outline: 0;
+  }
+
+  input[type='text'] { font-size: 20px; font-family: monospace; }
+  .todo input[type="checkbox"] {
+    transform: scale(1.8) translateY(1px);
+    margin: 0 16px 0 0;
+    cursor: pointer;
+  }
+  .todo-text input {
+    padding: 4px;
+  }
+  .todo-text {
+    font-size: 24px;
+    line-height: 24px;
+    margin-bottom: 1cm;
+    display: flex;
+    align-self: center;
+  }
+  .todo.completed {
+    display: flex;
+    margin: 10px 0;
+    background-color: #d4edda;
+  }
+
+  .todo.incomplete {
+    background-color: #f8d7da; /* Light red */
+  }
+
+  .todo-actions {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #completed {
+    margin-left: 15px;
+  }
