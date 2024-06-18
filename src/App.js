@@ -108,10 +108,10 @@ return(
                 <button onClick={() => submitEdits(todo)}>Submit Edits</button>
               ) :
               (
-                <button onClick={() => setTodoEditing(todo.id)}>Edit</button>
+                <button onClick={() => setTodoEditing(todo.id)}><img src={require('./images/edit.png').default}/></button>
               )}
-              <button onClick={() => deleteTodo(todo.id)}>Delete</button>
-             </div>
+              <button onClick={() => deleteTodo(todo.id)}><img src={require('./images/delete.png').default}/></button>
+            </div>
           </div>
         ))}
     </div>
