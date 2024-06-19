@@ -1,5 +1,8 @@
 import React, {useState,useEffect} from "react";
 import "./App.css";
+import editIcon from './images/edit.png';
+import deleteIcon from './images/delete.png';
+import submitIcon from './images/submit.png';
 
 
 const App = () => {
@@ -82,8 +85,8 @@ return(
             <button type="submit" id='addBtn'>+</button>
         </form>
         {todos.map((todo) => (
-          <div key={todo.id} className="todo">
-            <div className="todo-text">
+          <div key={todo.id} className={`todo ${todo.completed ? "completed" : ""}`}>
+            <div className={`todo-text ${todo.completed ? "completed" : ""}`}>
               {/* Add checkbox for toggle complete */}
               <input
                 type="checkbox"
@@ -105,12 +108,12 @@ return(
               {/* if it is edit mode, allow submit edit, else allow edit */}
               {todo.id === todoEditing ?
               (
-                <button onClick={() => submitEdits(todo)}>Submit Edits</button>
+                <button onClick={() => submitEdits(todo)} id="submitBtn"><img src={submitIcon} alt="Submit"/></button>
               ) :
               (
-                <button onClick={() => setTodoEditing(todo.id)}><img src={require('./images/edit.png').default}/></button>
+                <button onClick={() => setTodoEditing(todo.id)}><img src={editIcon} alt="Edit"/></button>
               )}
-              <button onClick={() => deleteTodo(todo.id)}><img src={require('./images/delete.png').default}/></button>
+              <button onClick={() => deleteTodo(todo.id)}><img src={deleteIcon} alt="Delete"/></button>
             </div>
           </div>
         ))}
