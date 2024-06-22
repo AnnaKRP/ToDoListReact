@@ -59,6 +59,7 @@ input[type='text'] {
   font-family: "Sansita Swashed", system-ui;
   font-optical-sizing: auto;
   font-style: normal;
+  flex-grow: 1;
 }
 
 
@@ -91,9 +92,9 @@ input[type='text'] {
   left: 5px;
 }
 
-.todo-text.completed {
+.todo-text.completed span {
   color: #2c2330;
-  /* text-decoration: line-through; */
+  text-decoration: line-through;
 }
 
 .todo.completed {
@@ -117,7 +118,7 @@ input[type='text'] {
 button {
   font-size: 18px;
   font-weight: bold;
-  background-color: #2c2330;
+  background-color: #2c233044;
   margin: 1px;
   color: #fff;
   border-radius: 8px;
@@ -138,15 +139,6 @@ img {
   padding: 10px 14px;
 }
 
-#submitBtn {
-  width: 100px;
-}
-
-#submitBtn img{
-  width: 60px;
-  height: 50px;
-}
-
 button:hover {
   background-color: #893f71;
 }
@@ -154,8 +146,3 @@ button:hover {
 button:active {
   background-color: #893f71;
 }
-
-
-
-
-
